@@ -16,13 +16,18 @@ public class RotateFunction {
 //    Calculate the maximum value of F(0), F(1), ..., F(n-1).
 //
 //    Note: n is guaranteed to be less than 10.pow5
+//
+//    added 2 tests:
+//    a case for null arrays to avoid nullPointerExc.
+//    and another for empty arrays.
+
+//    This is the best way of doing it with libraries to avoid create a new array each rotation,
+//    the other solution uses no libraries and is called RotateFunctionWithNoLibraries
 
     public static void main(String[] args) {
         System.out.println("Expected output: 26 Output: " + maxRotationMultiplier(new int[]{4, 3, 2, 6}));
         System.out.println("Expected output: 0 Output: " + maxRotationMultiplier(new int[]{}));
         System.out.println("Expected output: -1 Output: " + maxRotationMultiplier(null));
-
-
     }
 
     public static int maxRotationMultiplier(int[] arrayOfNumbers) {
@@ -42,7 +47,5 @@ public class RotateFunction {
             numbers.add(0, numbers.remove(numbers.size() - 1));
         }
         return max;
-
-
     }
 }
