@@ -6,31 +6,34 @@ import java.util.stream.Collectors;
 
 public class RotateFunction {
 
-//    Given an array of integers A and let n to be its length.
-//
-//    Assume Bk to be an array obtained by rotating the array A k positions clock-wise,
-//    we define a "rotation function" F on A as follow:
-//
-//    F(k) = 0 * Bk[0] + 1 * Bk[1] + ... + (n-1) * Bk[n-1].
-//
-//    Calculate the maximum value of F(0), F(1), ..., F(n-1).
-//
-//    Note: n is guaranteed to be less than 10.pow5
-//
-//    added 2 tests:
-//    a case for null arrays to avoid nullPointerExc.
-//    and another for empty arrays.
-
-//    This is the best way of doing it with libraries to avoid create a new array each rotation,
-//    the other solution uses no libraries and is called RotateFunctionWithNoLibraries
+    /**
+     * Given an array of integers A and let n to be its length.
+     * <p>
+     * Assume Bk to be an array obtained by rotating the array A k positions clock-wise,
+     * we define a "rotation function" F on A as follow:
+     * <p>
+     * F(k) = 0 * Bk[0] + 1 * Bk[1] + ... + (n-1) * Bk[n-1].
+     * <p>
+     * Calculate the maximum value of F(0), F(1), ..., F(n-1).
+     * <p>
+     * Note: n is guaranteed to be less than 10.pow5
+     * <p>
+     * added 2 tests:
+     * a case for null arrays to avoid nullPointerExc.
+     * and another for empty arrays.
+     * <p>
+     * This is the best way of doing it with libraries to avoid create a new array each rotation,
+     * the other solution uses no libraries and is called RotateFunctionWithNoLibraries
+     */
 
     public static void main(String[] args) {
-        System.out.println("Expected output: 26 Output: " + maxRotationMultiplier(new int[]{4, 3, 2, 6}));
-        System.out.println("Expected output: 0 Output: " + maxRotationMultiplier(new int[]{}));
-        System.out.println("Expected output: -1 Output: " + maxRotationMultiplier(null));
+        RotateFunction a = new RotateFunction();
+        System.out.println("Expected output: 26 Output: " + a.maxRotationMultiplier(new int[]{4, 3, 2, 6}));
+        System.out.println("Expected output: 0 Output: " + a.maxRotationMultiplier(new int[]{}));
+        System.out.println("Expected output: -1 Output: " + a.maxRotationMultiplier(null));
     }
 
-    public static int maxRotationMultiplier(int[] arrayOfNumbers) {
+    private int maxRotationMultiplier(int[] arrayOfNumbers) {
         int sum = 0;
         int max = 0;
         if (arrayOfNumbers == null) {
@@ -38,9 +41,9 @@ public class RotateFunction {
             return -1;
         }
         List<Integer> numbers = Arrays.stream(arrayOfNumbers).boxed().collect(Collectors.toList());
-        for (int i = 0; i < numbers.size(); i++) {
-            for (int j = 0; j < numbers.size(); j++) {
-                sum = sum + (numbers.get(j) * j);
+        for (int permutations = 0; permutations < numbers.size(); permutations++) {
+            for (int number = 0; number < numbers.size(); number++) {
+                sum = sum + (numbers.get(number) * number);
             }
             if (max < sum) max = sum;
             sum = 0;
