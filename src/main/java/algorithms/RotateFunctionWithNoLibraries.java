@@ -22,16 +22,18 @@ public class RotateFunctionWithNoLibraries {
     public static void main(String[] args) {
         RotateFunctionWithNoLibraries a = new RotateFunctionWithNoLibraries();
         System.out.println("Expected output: 26 Output: " + a.maxRotationMultiplier(new int[]{4, 3, 2, 6}));
+        System.out.println("Expected output: 26 Output: " + a.maxRotationMultiplier(new int[]{6, 4, 3, 2}));
+        System.out.println("Expected output: -2147483648 Output: " + a.maxRotationMultiplier(new int[]{-2147483648, -2147483648}));
         System.out.println("Expected output: 0 Output: " + a.maxRotationMultiplier(new int[]{}));
-        System.out.println("Expected output: -1 Output: " + a.maxRotationMultiplier(null));
+        System.out.println("Expected output: 0 Output: " + a.maxRotationMultiplier(null));
     }
 
     private int maxRotationMultiplier(int[] numbers) {
         int sum;
-        int max = 0;
-        if (numbers == null) {
+        int max = -2147483648;
+        if (numbers == null|| numbers.length <= 1) {
             System.out.println("array is null");
-            return -1;
+            return 0;
         }
         for (int digit = 0; digit < numbers.length; digit++) {
             sum = findProduct(numbers);

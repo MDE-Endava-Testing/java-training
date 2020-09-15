@@ -8,7 +8,7 @@ public class SudokuSolver {
 
     public static void main(String[] args) {
         SudokuSolver s = new SudokuSolver();
-        char[][] matrix = {
+        char[][] board = {
                 {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
                 {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
                 {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -19,7 +19,7 @@ public class SudokuSolver {
                 {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                 {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
         };
-        char[][] matrix0 = {
+        char[][] anotherBoard = {
                 {'9', '0', '0', '1', '0', '0', '0', '0', '5'},
                 {'0', '0', '5', '0', '9', '0', '2', '0', '1'},
                 {'8', '0', '0', '0', '4', '0', '0', '0', '0'},
@@ -30,34 +30,34 @@ public class SudokuSolver {
                 {'0', '0', '0', '2', '0', '0', '9', '0', '0'},
                 {'0', '0', '1', '9', '0', '4', '5', '7', '0'}
         };
-        matrix = s.sudokuSolution(matrix);
+        board = s.sudokuSolution(board);
         for (int i = 0; i < NINE; i++) {
             for (int j = 0; j < NINE; j++) {
-                System.out.print(" " + matrix[i][j]);
+                System.out.print(" " + board[i][j]);
             }
 
             System.out.println();
         }
     }
 
-    public char[][] sudokuSolution(char[][] matrix) {
-        if (solver(matrix)) {
-            return matrix;
+    public char[][] sudokuSolution(char[][] board) {
+        if (solver(board)) {
+            return board;
         }
         return null;
     }
 
-    private boolean solver(char[][] matrix) {
+    private boolean solver(char[][] board) {
         for (int row = 0; row < NINE; row++) {
             for (int column = 0; column < NINE; column++) {
-                if (matrix[row][column] == '.') {
+                if (board[row][column] == '.') {
                     for (int number = 1; number <= NINE; number++) {
-                        if (isLegal(row, column, matrix, (char) (number + '0'))) {
-                            matrix[row][column] = (char) (number + '0');
-                            if (solver(matrix)) {
+                        if (isLegal(row, column, board, (char) (number + '0'))) {
+                            board[row][column] = (char) (number + '0');
+                            if (solver(board)) {
                                 return true;
                             } else {
-                                matrix[row][column] = '.';
+                                board[row][column] = '.';
                             }
                         }
                     }

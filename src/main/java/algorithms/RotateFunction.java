@@ -34,12 +34,12 @@ public class RotateFunction {
     }
 
     private int maxRotationMultiplier(int[] arrayOfNumbers) {
-        int sum = 0;
-        int max = 0;
-        if (arrayOfNumbers == null) {
-            System.out.println("array is null");
-            return -1;
+        if (arrayOfNumbers == null || arrayOfNumbers.length == 0) {
+            System.out.println("Given array is null or empty");
+            return 0;
         }
+        int sum = 0;
+        int max = -100001;
         List<Integer> numbers = Arrays.stream(arrayOfNumbers).boxed().collect(Collectors.toList());
         for (int permutations = 0; permutations < numbers.size(); permutations++) {
             for (int number = 0; number < numbers.size(); number++) {
