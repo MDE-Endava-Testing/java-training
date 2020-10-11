@@ -20,10 +20,10 @@ public class SelectionSorting {
         }
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         SelectionSorting ob = new SelectionSorting();
-        int array[] = {64,25,12,22,11};
+        int[] array = {64,25,12,22,11};
         ob.sort(array);
         System.out.println("\nSorted Array: "+ Arrays.toString(array));
     }
