@@ -13,6 +13,11 @@ public class TestAnimal {
         animals.add(d);
         animals.add(c);
         animals.add(h);
+        testAnimal(d);
+        testAnimal(c);
+        testAnimal(h);
+
+        //Appplying downcasting
         for (int i = 0; i < animals.size(); i++) {
            // testAnimal(animals.get(i));
         }
