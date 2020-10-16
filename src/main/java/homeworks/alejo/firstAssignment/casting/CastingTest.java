@@ -1,4 +1,4 @@
-package avelasquez.casting;
+package homeworks.alejo.firstAssignment.casting;
 
 //Ejemplo de una conversion en la que tenemos una variable que apunta a objetos tipo hijo, pero no podemos acceder a sus
 //metodos por lo que realizamos una conversion a la clase de tipo hijo para poder acceder a sus metodos
