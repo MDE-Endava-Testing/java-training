@@ -1,4 +1,4 @@
-package HerenciaInterface;
+package homeworks.jose.firstAssigment.HerenciaInterface;
 
 public class Square extends Figures implements Drawable {
 

@@ -1,4 +1,4 @@
-package HerenciaInterface;
+package homeworks.jose.firstAssigment.HerenciaInterface;
 
 public class MainFigures {
 
