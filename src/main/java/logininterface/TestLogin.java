@@ -28,6 +28,15 @@ public class TestLogin {
         IosLogin i = new IosLogin();
         WebLogin w = new WebLogin();
 
+
+
+
+
+
+
+
+
+        //Login l = () ->();
         //without
         testAndroidLogin(a);
         testIosLogin(i);

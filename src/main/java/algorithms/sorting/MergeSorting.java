@@ -42,7 +42,7 @@ public class MergeSorting {
             for (int i = mid; i < arrayLength; i++) {
                 right[i - mid] = array[i];
             }
-            System.out.println("\nL: " + Arrays.toString(left)+ " R: " + Arrays.toString(right));
+            System.out.println("\nL: " + Arrays.toString(left) + " R: " + Arrays.toString(right));
             mergeSort(left);
             mergeSort(right);
             merge(left, right, array);
@@ -50,13 +50,12 @@ public class MergeSorting {
     }
 
     public static void main(String[] args) {
-        int[] array = {12, 11, 13, 5, 6, 7, 8};
-        System.out.println("Given Array: "+ Arrays.toString(array));
+        int[] array = {7, 2, -8, 15, 9, 10, 8, 12, 11, 13, 5, 6};
+        System.out.println("Given Array: " + Arrays.toString(array));
         MergeSorting ob = new MergeSorting();
         ob.mergeSort(array);
-        System.out.println("\nSorted Array: "+ Arrays.toString(array));
+        System.out.println("\nSorted Array: " + Arrays.toString(array));
     }
-
 
 
 }
