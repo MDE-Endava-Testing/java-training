@@ -29,6 +29,11 @@ public class TestLogin {
         WebLogin w = new WebLogin();
 
 
+        testLogin(a);
+
+
+
+
 
 
 
