@@ -13,7 +13,7 @@ public class CastingTest {
         System.out.println(empleado.obtenerDetalles());
 
         // No puedo acceder
-        //empleado.getTipodeEscrituratxt()
+        //empleado.getTipodeEscrituratxt();
         // Para acceder a este metodo tenemos que hacer una conversion de empleado a escritor
 
         //Primera manera
