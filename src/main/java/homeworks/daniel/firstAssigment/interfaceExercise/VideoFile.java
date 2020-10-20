@@ -1,4 +1,4 @@
-package interfaceExercise;
+package homeworks.daniel.firstAssigment.interfaceExercise;
 
 public class VideoFile implements MediaSource, DynamicSource {
     private String filepath ;

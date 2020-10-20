@@ -1,4 +1,4 @@
-package interfaceExercise;
+package homeworks.daniel.firstAssigment.interfaceExercise;
 
 public class VideoStream implements MediaSource, DynamicSource {
     private String sourceURL;

@@ -1,4 +1,4 @@
-package interfaceExercise;
+package homeworks.daniel.firstAssigment.interfaceExercise;
 
 import java.util.ArrayList;
 import java.util.List;

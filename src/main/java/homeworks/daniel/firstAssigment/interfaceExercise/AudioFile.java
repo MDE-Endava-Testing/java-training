@@ -1,4 +1,4 @@
-package interfaceExercise;
+package homeworks.daniel.firstAssigment.interfaceExercise;
 
 /**
  * Audio file specification

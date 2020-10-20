@@ -1,4 +1,4 @@
-package inheritanceExercise;
+package homeworks.daniel.firstAssigment.inheritanceExercise;
 
 public class TestDevice {
     public static void main(String[] args) {

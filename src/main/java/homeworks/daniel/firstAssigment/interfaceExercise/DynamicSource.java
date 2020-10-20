@@ -1,4 +1,4 @@
-package interfaceExercise;
+package homeworks.daniel.firstAssigment.interfaceExercise;
 
 /**
  * Interface implementation for dynamic file sources, like video or audio
