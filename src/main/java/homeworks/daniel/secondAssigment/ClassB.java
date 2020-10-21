@@ -4,12 +4,9 @@ import java.util.List;
 import java.util.Set;
 
 public class ClassB extends ClassABC {
-    int a;
-    String b;
-    Set c;
+    private Set c;
 
-    void methodA(){}
     @Override
-    void methodB(){System.out.println("ClassB:methodB");}
-    void methodC(){}
+    public void methodB(){System.out.println("ClassB:methodB");}
+
 }

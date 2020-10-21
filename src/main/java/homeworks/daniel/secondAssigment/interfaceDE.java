@@ -1,6 +1,6 @@
 package homeworks.daniel.secondAssigment;
 
-public interface interfaceCE {
+public interface interfaceDE {
     void methodD();
     void methodE();
 }

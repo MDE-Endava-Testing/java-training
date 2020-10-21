@@ -3,12 +3,9 @@ package homeworks.daniel.secondAssigment;
 import java.util.Map;
 
 public class ClassD extends ClassABC {
-    int a;
-    String b;
-    Map d;
 
-    void methodA(){}
-    void methodB(){}
+    private Map d;
+
     @Override
-    void methodC(){System.out.println("ClassD:methodC");}
+    public void methodC(){System.out.println("ClassD:methodC");}
 }

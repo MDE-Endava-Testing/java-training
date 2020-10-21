@@ -1,9 +1,11 @@
 package homeworks.daniel.secondAssigment;
 
-public class ClassC  {
-    boolean f;
-    String i;
+public class ClassC implements interfaceDE {
+    private boolean f;
+    private String i;
 
-    void methodD(){}
-    void methodE(){System.out.println("ClassC:methodE");}
+    @Override
+    public void methodD(){}
+    @Override
+    public void methodE(){System.out.println("ClassC:methodE");}
 }
