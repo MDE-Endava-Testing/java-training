@@ -1,4 +1,4 @@
-package homeworks.andrea.firstAssigment.inheritance;
+package homeworks.andrea.firstAssignment.inheritance;
 
 import org.openqa.selenium.WebElement;
 

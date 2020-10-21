@@ -1,4 +1,4 @@
-package homeworks.andrea.firstAssigment.interfaces;
+package homeworks.andrea.firstAssignment.interfaces;
 
 public interface ProductSearch {
 

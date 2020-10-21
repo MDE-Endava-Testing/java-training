@@ -1,4 +1,4 @@
-package homeworks.andrea.secondAssigment;
+package homeworks.andrea.secondAssignment;
 
 import java.util.List;
 

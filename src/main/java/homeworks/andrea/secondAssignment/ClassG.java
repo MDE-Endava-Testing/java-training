@@ -1,4 +1,4 @@
-package homeworks.andrea.secondAssigment;
+package homeworks.andrea.secondAssignment;
 
 public class ClassG extends ParentClassOne implements InterfaceDE {
 
