@@ -1,4 +1,4 @@
-package homeworks.christian.firstAssigment.herenciaAndInterface;
+package homeworks.christian.firstAssigment.firstAssigment;
 
 public class Hombre extends Humano{
 
