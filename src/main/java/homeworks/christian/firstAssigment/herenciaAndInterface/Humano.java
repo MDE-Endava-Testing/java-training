@@ -6,7 +6,22 @@ public class Humano implements Interface{
     private String name;
 
     public void pensar(){
-        System.out.println("El humano esta pensado");
+        System.out.println("El humano llamado " + name + " esta pensado");
+    }
+
+    @Override
+    public void comunicarse() {
+        System.out.println("El humano esta comunicandose");
+    }
+
+    @Override
+    public void alimentarse() {
+        System.out.println("El humano esta alimentandose");
+    }
+
+    @Override
+    public void dormir() {
+        System.out.println("El humano esta durmiendo");
     }
 
     public int getCedula() {
@@ -23,20 +38,5 @@ public class Humano implements Interface{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Override
-    public void comunicarse() {
-
-    }
-
-    @Override
-    public void alimentarse() {
-
-    }
-
-    @Override
-    public void dormir() {
-
     }
 }
