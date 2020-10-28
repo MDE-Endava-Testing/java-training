@@ -21,17 +21,14 @@ public abstract class ParentClassOne implements InterfaceABC {
         this.b = b;
     }
 
-    @Override
     public void methodA() {
         System.out.println("I'm the generic method A of the Parent Class one");
     }
 
-    @Override
     public void methodB() {
         System.out.println("I'm the generic method B  of the Parent Class one");
     }
 
-    @Override
     public void methodC() {
         System.out.println("I'm the generic method C  of the Parent Class one");
     }

@@ -2,13 +2,12 @@ package homeworks.andrea.firstAssignment.inheritance;
 
 import org.openqa.selenium.WebElement;
 
+/**
+ * This class contains the web elements and methods used for interacting with the login page
+ * It simulates the actions a user will do when trying to log into a web app
+ */
+
 public class LoginPage extends PageBase {
-
-    /**
-     * This class contains the web elements and methods used for interacting with the login page
-     * It simulates the actions a user will do when trying to log into a web app
-     */
-
 
     private WebElement nameField;
     private WebElement passwordField;
@@ -26,6 +25,4 @@ public class LoginPage extends PageBase {
         fillInformation(passwordField, password);
         clickOnElement(confirmButton);
     }
-
-
 }

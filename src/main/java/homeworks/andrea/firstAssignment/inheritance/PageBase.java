@@ -2,14 +2,12 @@ package homeworks.andrea.firstAssignment.inheritance;
 
 import org.openqa.selenium.WebElement;
 
+/**
+ * This class contains the main methods used for interacting with a web or mobile page in order to simulate
+ * different and repetitive UI behaviors.
+ */
+
 public class PageBase {
-
-    /**
-     * This class contains the main methods used for interacting with a web or mobile page in order to simulate
-     * different and repetitive UI behaviors.
-     *
-     */
-
 
     /**
      * Allows to wait until an element is visible and then click on it
@@ -22,9 +20,6 @@ public class PageBase {
         System.out.println("Clicking on element");
     }
 
-    ;
-
-
     /**
      * Allows to scroll down on a page until a defined element is found inside that page
      *
@@ -36,9 +31,6 @@ public class PageBase {
         System.out.println("Scroll finished because element was found");
     }
 
-    ;
-
-
     /**
      * Allows to fill a specific field with a defined value
      *
@@ -49,6 +41,4 @@ public class PageBase {
 
         System.out.println("filling value into element");
     }
-
-
 }

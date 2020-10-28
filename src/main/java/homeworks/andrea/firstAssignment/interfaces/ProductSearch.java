@@ -11,7 +11,6 @@ public interface ProductSearch {
      * @see SearchComicsPage
      */
 
-
     /**
      * Searches by author's name
      *

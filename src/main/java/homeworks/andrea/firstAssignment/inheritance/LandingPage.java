@@ -2,17 +2,15 @@ package homeworks.andrea.firstAssignment.inheritance;
 
 import org.openqa.selenium.WebElement;
 
+/**
+ * This class contains the web elements and methods used for interacting with the landing page in order to simulate the different user actions
+ */
 
 public class LandingPage extends PageBase {
-
-    /**
-     * This class contains the web elements and methods used for interacting with the landing page in order to simulate the different user actions
-     */
 
     private WebElement searchBox;
     private WebElement confirmSearchButton;
     private WebElement nextPageButton;
-
 
     /**
      * This method allows to search a specific product using the search box that is located on the landing page
@@ -35,6 +33,4 @@ public class LandingPage extends PageBase {
         scrollDown(nextPageButton);
         clickOnElement(nextPageButton);
     }
-
-
 }

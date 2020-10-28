@@ -1,12 +1,11 @@
 package homeworks.andrea.firstAssignment.interfaces;
 
+/**
+ * This class contains the variables and methods that allow to interact with the E-book searching page
+ * This class helps to simulate the actions done by a user when interacting with the E-book searching page
+ */
+
 public class SearchEbooksPage implements ProductSearch {
-
-    /**
-     * This class contains the variables and methods that allow to interact with the E-book searching page
-     * This class helps to simulate the actions done by a user when interacting with the E-book searching page
-     */
-
 
     /**
      * This method allows to search and filter E-books by author's name
@@ -49,6 +48,4 @@ public class SearchEbooksPage implements ProductSearch {
 
         System.out.println("searching E-books with a price between min price and max price");
     }
-
-
 }

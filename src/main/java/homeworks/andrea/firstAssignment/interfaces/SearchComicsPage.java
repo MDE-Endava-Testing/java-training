@@ -1,11 +1,11 @@
 package homeworks.andrea.firstAssignment.interfaces;
 
-public class SearchComicsPage implements ProductSearch {
+/**
+ * This class contains the variables and methods that allow to interact with the Comics searching page
+ * This class helps to simulate the actions done by a user when interacting with the Comics searching page
+ */
 
-    /**
-     * This class contains the variables and methods that allow to interact with the Comics searching page
-     * This class helps to simulate the actions done by a user when interacting with the Comics searching page
-     */
+public class SearchComicsPage implements ProductSearch {
 
     /**
      * This method allows to search and filter Comics by author's name
@@ -48,6 +48,4 @@ public class SearchComicsPage implements ProductSearch {
 
         System.out.println("searching comics with a price between min price and max price");
     }
-
-
 }
