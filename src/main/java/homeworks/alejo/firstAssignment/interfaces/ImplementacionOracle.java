@@ -1,6 +1,6 @@
 package homeworks.alejo.firstAssignment.interfaces;
 
-public class ImplementacionOracle implements AccesoDatos{
+public class ImplementacionOracle implements AccesoDatos {
 
 
     @Override

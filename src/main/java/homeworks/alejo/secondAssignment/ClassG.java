@@ -1,6 +1,6 @@
 package homeworks.alejo.secondAssignment;
 
-public class ClassG extends ParentClassABDG implements InterfaceCEG{
+public class ClassG extends ParentClassABDG implements InterfaceCEG {
 
     private boolean f;
 

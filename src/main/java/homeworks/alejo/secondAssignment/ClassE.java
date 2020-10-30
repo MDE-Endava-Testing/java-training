@@ -2,7 +2,7 @@ package homeworks.alejo.secondAssignment;
 
 import java.util.List;
 
-public class ClassE implements InterfaceCEG{
+public class ClassE implements InterfaceCEG {
     private int h;
     private List<Integer> c;
 

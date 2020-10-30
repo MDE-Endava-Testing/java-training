@@ -1,6 +1,6 @@
 package homeworks.alejo.firstAssignment.interfaces;
 
-public class ImplementacionMysql implements  AccesoDatos{
+public class ImplementacionMysql implements AccesoDatos {
 
     @Override
     public void insertar() {
