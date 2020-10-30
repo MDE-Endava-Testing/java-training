@@ -2,20 +2,30 @@ package homeworks.christian.firstAssigment.secondAssigment;
 
 import java.util.HashSet;
 
-public class ClassB extends ClassA{
+public class ClassB extends ParentABD{
 
-    HashSet e = new HashSet();
+    private HashSet e = new HashSet();
 
+    /**
+     * this method is empty and is a override
+     */
     @Override
-    public void methodC() {
-        super.methodC();
-        System.out.println("method general C in B");
+    public void MethodB() {
+        super.MethodB();
     }
 
+    /**
+     * method get e
+     * @return e
+     */
     public HashSet getE() {
         return e;
     }
 
+    /**
+     * method set e
+     * @param e
+     */
     public void setE(HashSet e) {
         this.e = e;
     }

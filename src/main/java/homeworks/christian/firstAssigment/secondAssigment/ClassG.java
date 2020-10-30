@@ -1,41 +1,45 @@
 package homeworks.christian.firstAssigment.secondAssigment;
 
-public class ClassG extends ClassA implements InterfaceDE{
+public class ClassG extends ParentABD implements InterfaceCEG {
 
-    private int a;
-    private String b;
     private boolean f;
 
+    /**
+     * this method is empty and is a override
+     */
+    @Override
+    public void MethodA() {
+        super.MethodA();
+    }
+
+    /**
+     * this method is empty and is a override
+     */
     @Override
     public void methodD() {
-        System.out.println("method general D");
+
     }
 
+    /**
+     * this method is empty and is a override
+     */
     @Override
     public void methodE() {
-        System.out.println("method unique E");
+
     }
 
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public String getB() {
-        return b;
-    }
-
-    public void setB(String b) {
-        this.b = b;
-    }
-
+    /**
+     * mwthod get f
+     * @return f
+     */
     public boolean isF() {
         return f;
     }
 
+    /**
+     * methos set f
+     * @param f
+     */
     public void setF(boolean f) {
         this.f = f;
     }

@@ -3,20 +3,30 @@ package homeworks.christian.firstAssigment.secondAssigment;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class ClassD extends ClassA{
+public class ClassD extends ParentABD{
 
-    HashMap d = new HashMap();
+    private HashMap d = new HashMap();
 
+    /**
+     * this method is empty and is a override
+     */
     @Override
-    public void methodB() {
-        super.methodB();
-        System.out.println("method general B in D");
+    public void MethodC() {
+        super.MethodC();
     }
 
+    /**
+     * method get d
+     * @return d
+     */
     public HashMap getD() {
         return d;
     }
 
+    /**
+     * method set d
+     * @param d
+     */
     public void setD(HashMap d) {
         this.d = d;
     }

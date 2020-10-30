@@ -3,48 +3,40 @@ package homeworks.christian.firstAssigment.secondAssigment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassA implements InterfaceA{
+public class ClassA extends ParentABD{
 
-    private int a = 0;
-    private String b ="";
-    List<Integer> c = new ArrayList<Integer>();
+    private List<Integer> c = new ArrayList<Integer>();
 
+    /**
+     * this method is empty and is a override
+     */
     @Override
-    public void methodA() {
-        System.out.println("method general A in A");
+    public void MethodB() {
+        super.MethodB();
     }
 
+    /**
+     * this method is empty and is a override
+     */
     @Override
-    public void methodB() {
-        System.out.println("method unique B in A");
+    public void MethodC() {
+        super.MethodC();
     }
 
-    @Override
-    public void methodC() {
-        System.out.println("method unique C in A");
-    }
-
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public String getB() {
-        return b;
-    }
-
-    public void setB(String b) {
-        this.b = b;
-    }
-
+    /**
+     * method get c
+     * @return c
+     */
     public List<Integer> getC() {
         return c;
     }
 
+    /**
+     * method set c
+     * @param c
+     */
     public void setC(List<Integer> c) {
         this.c = c;
     }
+
 }

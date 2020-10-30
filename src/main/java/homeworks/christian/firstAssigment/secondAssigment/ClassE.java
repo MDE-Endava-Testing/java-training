@@ -3,20 +3,56 @@ package homeworks.christian.firstAssigment.secondAssigment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassE extends ClassC{
+public class ClassE implements InterfaceCEG {
 
     private int h;
-    List<Integer> c = new ArrayList<Integer>();
+    private List<Integer> c = new ArrayList<Integer>();
 
+    /**
+     * this method is empty and is a override
+     */
     @Override
     public void methodD() {
-        super.methodD();
-        System.out.println("method unique D in E");
+
     }
 
+    /**
+     * this method is empty and is a override
+     */
     @Override
     public void methodE() {
-        super.methodE();
-        System.out.println("method general E in E");
+
+    }
+
+    /**
+     * method get h
+     * @return h
+     */
+    public int getH() {
+        return h;
+    }
+
+    /**
+     * method set h
+     * @param h
+     */
+    public void setH(int h) {
+        this.h = h;
+    }
+
+    /**
+     * method get c
+     * @return c
+     */
+    public List<Integer> getC() {
+        return c;
+    }
+
+    /**
+     * method set c
+     * @param c
+     */
+    public void setC(List<Integer> c) {
+        this.c = c;
     }
 }
