@@ -16,7 +16,6 @@ public class MethodReferences {
 
         StringOperations concat = String::concat;
 
-
         System.out.println(upper.accept("UPPER"));
         System.out.println(lower.accept("lower"));
         System.out.println(concat.accept("tog","ether"));
