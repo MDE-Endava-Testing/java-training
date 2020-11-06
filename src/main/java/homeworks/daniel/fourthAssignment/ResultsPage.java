@@ -11,7 +11,8 @@ public class ResultsPage {
 
     private WebDriver driver;
 
-    private String anchorsLocator = "//div[@class='yuRUbf']/a[contains(@href,'%s')]";
+    private String anchorsLocatorXpath = "//div[@class='yuRUbf']/a[contains(@href,'%s')]";
+    private String anchorsLocatorCss = ".yuRUbf>a[href*='%s']";
     /**
      * POM page constructor
      * @param driver webDriver used to find and initialize webElements
@@ -20,7 +21,8 @@ public class ResultsPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    public AnchorSelector selector = (t) ->driver.findElements(By.xpath(String.format(anchorsLocator,t)));
+    public AnchorSelector selectorXpath = (t) ->driver.findElements(By.xpath(String.format(anchorsLocatorXpath,t)));
+    public AnchorSelector selectorCss = (t) ->driver.findElements(By.cssSelector(String.format(anchorsLocatorCss,t)));
 }
 
 

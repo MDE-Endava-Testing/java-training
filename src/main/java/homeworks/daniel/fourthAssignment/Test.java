@@ -19,14 +19,17 @@ public class Test {
         driver.get("https://www.google.com.co/");
 
         ResultsPage resultsPage = new LandingPage(driver).searchWord("java");
-        AnchorSelector testSelector = resultsPage.selector;
+        createWebElementLists(resultsPage.selectorXpath);
+        createWebElementLists(resultsPage.selectorCss);
+        driver.close();
+    }
+    public static void createWebElementLists(AnchorSelector testSelector){
         List<WebElement> javaAnchors = testSelector.selectAnchors("java.com");
         List<WebElement> oracleAnchors = testSelector.selectAnchors("oracle.com");
         List<WebElement> wikipediaAnchors = testSelector.selectAnchors("wikipedia.org");
         javaAnchors.forEach(x->System.out.println(x.getAttribute("href")));
         oracleAnchors.forEach(x->System.out.println(x.getAttribute("href")));
         wikipediaAnchors.forEach(x->System.out.println(x.getAttribute("href")));
-
-        driver.close();
+        System.out.println("--------------------------------");
     }
 }

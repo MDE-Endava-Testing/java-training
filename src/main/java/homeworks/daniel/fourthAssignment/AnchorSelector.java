@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 /**
- *  SAM interface used to implemend a lambda function helpful to select various Webelements form a string input
+ *  SAM interface used to implement a lambda function helpful to select various webElements from a string input
  */
 public interface AnchorSelector {
     /**
