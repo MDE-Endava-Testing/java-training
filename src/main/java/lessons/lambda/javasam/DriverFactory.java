@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 public class DriverFactory {
 
     private static final Supplier<WebDriver> chromeSupplier = ()->{
-        System.setProperty("webdriver.chrome.driver", "src\\main\\java\\homeworks\\daniel\\fourthAssignment\\WebDrivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         return new ChromeDriver();
     };
 
