@@ -13,7 +13,6 @@ import java.util.function.Supplier;
  * This class allows to set the different drivers for the different browsers that can be used in order to run tests.
  * The supplier interface is implemented using lambdas for the different Web drivers and are displayed on a hash map.
  */
-
 public class DriversFactory {
 
     /*Lambdas implemented using Supplier interface for the different web Drivers */

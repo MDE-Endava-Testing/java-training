@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 /**
  * This class contains all tests related to searching a word, sentence, url or something else using the Google searching bar.
  */
-
 public class SearchingTests {
 
     private WebDriver driver;
@@ -16,7 +15,6 @@ public class SearchingTests {
 
     @Before
     public void setDriver() {
-
         String browser = "chrome";
         this.driver = DriversFactory.getDriver(browser);
         this.search = new GoogleSearchPage(driver);
@@ -24,7 +22,6 @@ public class SearchingTests {
 
     @Test
     public void getAllLinksUsingLambda() {
-
         String myWordToSearch = "apple";
         this.driver.get("https://www.google.com.co/");
         search.searchOnSearchingBar(myWordToSearch).getAllLinksLambda();
@@ -32,7 +29,6 @@ public class SearchingTests {
 
     @Test
     public void getAllLinksRelatedToPizzaUsingLambdas() {
-
         String myWordToSearch = "pizza";
         this.driver.get("https://www.google.com.co/");
         search.searchOnSearchingBar(myWordToSearch).getAllLinksWithSpecificWordLambda(myWordToSearch);
@@ -40,14 +36,12 @@ public class SearchingTests {
 
     @Test
     public void getAllLinksRelatedToPizzaPiccoloUsingLambdas() {
-
         this.driver.get("https://www.google.com.co/");
         search.searchOnSearchingBar("pizza").getAllLinksWithSpecificWordLambda("piccolo");
     }
 
     @Test
     public void getAllLinksUsingIterator() {
-
         String myWordToSearch = "apple";
         this.driver.get("https://www.google.com.co/");
         search.searchOnSearchingBar(myWordToSearch).getAllLinksWithIterator(myWordToSearch);

@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 /**
  * This class represents the first page of the results obtained after searching a word, sentence, URL or something in particular using the Google Search bar.
  */
-
 public class FirstResultsPage {
 
     private WebDriver driver;
@@ -42,7 +41,6 @@ public class FirstResultsPage {
      * @return A list of Strings with those links that contain the word searched
      */
     List<String> getAllLinksWithSpecificWordLambda(String wordInput) {
-
         List<String> allLinks = links.stream().filter(element -> element.getText().contains(wordInput)).map(element -> element.getAttribute("href")).collect(Collectors.toList());
         allLinks.forEach(System.out::println);
         return allLinks;
@@ -55,7 +53,6 @@ public class FirstResultsPage {
      * @return A list of Strings with those links that contain the word searched
      */
     public List<String> getAllLinksWithIterator(String word) {
-
         Iterator<WebElement> myLinks = links.iterator();
         List<String> URLS = new ArrayList<>();
 

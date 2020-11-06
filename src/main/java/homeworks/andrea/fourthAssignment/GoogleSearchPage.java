@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
  * Here user can simulate searching a word, sentence, URL or something in particular by using the Search bar.
  * Additionally it contains a direct access to services such as Gmail, images searching page, Google account, google tools and favorite pages.
  */
-
 public class GoogleSearchPage {
 
     private WebDriver driver;
@@ -24,7 +23,6 @@ public class GoogleSearchPage {
         PageFactory.initElements(driver, this);
     }
 
-
     /**
      * This method allows to search a specific word using the Google searching bar.
      *
@@ -33,7 +31,6 @@ public class GoogleSearchPage {
      * @return this method allows to go to the next page, which is the First Results Page
      */
     public FirstResultsPage searchOnSearchingBar(String word) {
-
         searchingBar.click();
         searchingBar.sendKeys(word);
         searchingBar.sendKeys(Keys.ENTER);
