@@ -2,6 +2,11 @@ package homeworks.jose.firstAssigment.HerenciaInterface;
 
 public class MainFigures {
 
+    /**
+     * Main method, create two figures and set the base, height and name,
+     * after that it shows the figures
+     * @param args
+     */
     public static void main(String [] args){
         Triangle t1 = new Triangle();
         Square s1 = new Square();
