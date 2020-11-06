@@ -23,6 +23,11 @@ public class Test {
         createWebElementLists(resultsPage.selectorCss);
         driver.close();
     }
+
+    /**
+     * creates and prints different lists depending on the input string and type of locator(xpath,css)
+     * @param testSelector receives a lambda method to find the WebElements
+     */
     public static void createWebElementLists(AnchorSelector testSelector){
         List<WebElement> javaAnchors = testSelector.selectAnchors("java.com");
         List<WebElement> oracleAnchors = testSelector.selectAnchors("oracle.com");
