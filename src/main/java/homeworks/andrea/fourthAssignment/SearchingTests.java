@@ -23,18 +23,26 @@ public class SearchingTests {
     }
 
     @Test
+    public void getAllLinksUsingLambda() {
+
+        String myWordToSearch = "apple";
+        this.driver.get("https://www.google.com.co/");
+        search.searchOnSearchingBar(myWordToSearch).getAllLinksLambda();
+    }
+
+    @Test
     public void getAllLinksRelatedToPizzaUsingLambdas() {
 
         String myWordToSearch = "pizza";
         this.driver.get("https://www.google.com.co/");
-        search.searchOnSearchingBar(myWordToSearch).getAllLinksWithLambda(myWordToSearch);
+        search.searchOnSearchingBar(myWordToSearch).getAllLinksWithSpecificWordLambda(myWordToSearch);
     }
 
     @Test
     public void getAllLinksRelatedToPizzaPiccoloUsingLambdas() {
 
         this.driver.get("https://www.google.com.co/");
-        search.searchOnSearchingBar("pizza").getAllLinksWithLambda("piccolo");
+        search.searchOnSearchingBar("pizza").getAllLinksWithSpecificWordLambda("piccolo");
     }
 
     @Test
@@ -42,9 +50,8 @@ public class SearchingTests {
 
         String myWordToSearch = "apple";
         this.driver.get("https://www.google.com.co/");
-        search.searchOnSearchingBar(myWordToSearch).getAllLinksNormalWay(myWordToSearch);
+        search.searchOnSearchingBar(myWordToSearch).getAllLinksWithIterator(myWordToSearch);
     }
-
 
     @After
     public void closeDriver() {
