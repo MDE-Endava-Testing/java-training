@@ -2,7 +2,7 @@ package lessons.polymorphism;
 
 public abstract class Animal {
 
-    private String name;
+    protected String name;
 
     public void makeSound(){
         System.out.println("I am animal.. Grrrrr.....");
