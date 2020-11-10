@@ -1,4 +1,4 @@
-package lessons.lambda.javasam;
+package lessons.lambda.javasam.supplier;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,4 +1,4 @@
-package lessons.lambda.javasam;
+package lessons.lambda.javasam.consumer;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;

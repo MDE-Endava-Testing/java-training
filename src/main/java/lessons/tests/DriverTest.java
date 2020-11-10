@@ -1,14 +1,17 @@
 package lessons.tests;
 
-import lessons.lambda.javasam.DriverFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import static lessons.lambda.javasam.DriverFactory.getDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+import java.util.function.Predicate;
+
+import static lessons.lambda.javasam.supplier.DriverFactory.getDriver;
 
 public class DriverTest {
     private WebDriver driver;
@@ -16,7 +19,7 @@ public class DriverTest {
 
     @Before
     public void setDriver() {
-        String browser = "edge";
+        String browser = "chrome";
         this.driver = getDriver(browser);
 //        if ("chrome".equals(browser)) {
 //            System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
@@ -44,6 +47,71 @@ public class DriverTest {
         this.driver.get("https://www.google.com/");
         //quiero todos los  //a que cumplan con la condicion ""
     }
+
+    @Test
+    public void googleResultsTestConsumer() {
+        this.driver.get("https://www.google.com/");
+        this.driver.findElements(By.tagName("a"))
+                .forEach(e -> System.out.println(e.getText()));
+
+    }
+
+    @Test
+    public void googleResultsWithText() {
+        String param = "doblepizza";
+        this.driver.get("https://www.google.com/");
+        List<WebElement> elements = this.driver.findElements(By.tagName("a"));
+        //predicate
+        Predicate<WebElement> isBlank = e -> e.getText().trim().length() == 0;
+
+        System.out.println("Before :: " + elements.size());
+
+        elements.removeIf(isBlank);
+
+        System.out.println("After :: " + elements.size());
+
+        //with consumer
+        elements.forEach(e -> System.out.println(e.getText()));
+
+    }
+
+    @Test
+    public void googleResultsWithTextAndContainsParam() {
+        String keyWord = "doblepizza";
+        this.driver.get("https://www.google.com/");
+        WebElement searchTxt = this.driver.findElement(By.xpath("//input[@title='Buscar']"));
+        searchTxt.sendKeys("pizzas");
+        searchTxt.sendKeys(Keys.ENTER);
+
+        List<WebElement> elements = this.driver.findElements(By.tagName("a"));
+
+        Predicate<WebElement> isBlank = e -> e.getText().trim().length() == 0;
+        Predicate<WebElement> hasKeyword = e -> e.getText().toLowerCase().contains(keyWord);
+
+        System.out.println("Before :: " + elements.size());
+
+        //    remove all blanks or withkeyword
+
+        elements.removeIf(isBlank.or(hasKeyword.negate()));
+
+        System.out.println("After :: " + elements.size());
+
+        //with consumer
+        elements.forEach(e -> System.out.println("::" + e.getText()));
+    }
+
+
+    public void googleResultsWithTextAndContainsParamSum(String keyword) {
+        WebElement searchTxt = this.driver.findElement(By.xpath("//input[@title='Buscar']"));
+        searchTxt.sendKeys("pizzas");
+        searchTxt.sendKeys(Keys.ENTER);
+        List<WebElement> elements = this.driver.findElements(By.tagName("a"));
+        Predicate<WebElement> isBlank = e -> e.getText().trim().length() == 0;
+        Predicate<WebElement> hasKeyword = e -> e.getText().toLowerCase().contains(keyword);
+        elements.removeIf(isBlank.or(hasKeyword.negate()));
+        elements.forEach(e -> System.out.println("::" + e.getText()));
+    }
+
 
     @After
     public void closeDriver() {
