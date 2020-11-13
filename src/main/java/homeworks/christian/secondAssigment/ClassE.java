@@ -1,26 +1,43 @@
-package homeworks.christian.firstAssigment.secondAssigment;
+package homeworks.christian.secondAssigment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassA extends ParentABD{
+public class ClassE implements InterfaceCEG {
 
+    private int h;
     private List<Integer> c = new ArrayList<Integer>();
 
     /**
      * this method is empty and is a override
      */
     @Override
-    public void MethodB() {
-        super.MethodB();
+    public void methodD() {
+
     }
 
     /**
      * this method is empty and is a override
      */
     @Override
-    public void MethodC() {
-        super.MethodC();
+    public void methodE() {
+
+    }
+
+    /**
+     * method get h
+     * @return h
+     */
+    public int getH() {
+        return h;
+    }
+
+    /**
+     * method set h
+     * @param h
+     */
+    public void setH(int h) {
+        this.h = h;
     }
 
     /**
@@ -38,5 +55,4 @@ public class ClassA extends ParentABD{
     public void setC(List<Integer> c) {
         this.c = c;
     }
-
 }

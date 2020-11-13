@@ -1,13 +1,10 @@
-package homeworks.christian.firstAssigment.fourAssignment.pageObjects;
+package homeworks.christian.fourthAssignment.pageObjects;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.List;
-import java.util.function.Predicate;
 
 /**
  * this class set the word and click the enter for search the links about that

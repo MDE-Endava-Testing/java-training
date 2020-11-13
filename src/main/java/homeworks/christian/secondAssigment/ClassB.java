@@ -1,4 +1,4 @@
-package homeworks.christian.firstAssigment.secondAssigment;
+package homeworks.christian.secondAssigment;
 
 import java.util.HashSet;
 

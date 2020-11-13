@@ -1,4 +1,4 @@
-package homeworks.christian.firstAssigment.secondAssigment;
+package homeworks.christian.secondAssigment;
 
 public class ClassG extends ParentABD implements InterfaceCEG {
 

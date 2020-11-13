@@ -1,4 +1,4 @@
-package homeworks.christian.firstAssigment.firstAssigment;
+package homeworks.christian.firstAssigment;
 
 public class Man extends Human {
 

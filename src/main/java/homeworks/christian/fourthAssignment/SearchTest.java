@@ -1,15 +1,10 @@
-package homeworks.christian.firstAssigment.fourAssignment;
+package homeworks.christian.fourthAssignment;
 
-import homeworks.christian.firstAssigment.fourAssignment.pageObjects.SearchPage;
+import homeworks.christian.fourthAssignment.pageObjects.SearchPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
-import java.util.function.Predicate;
 
 /**
  * this class doing the test case related with search the word car in the box of text and filter the nulls

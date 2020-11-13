@@ -1,7 +1,6 @@
-package homeworks.christian.firstAssigment.secondAssigment;
+package homeworks.christian.secondAssigment;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class ClassD extends ParentABD{
 
