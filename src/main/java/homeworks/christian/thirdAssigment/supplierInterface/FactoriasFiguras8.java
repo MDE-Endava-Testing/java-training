@@ -18,14 +18,7 @@ public class FactoriasFiguras8 {
      * @return a new circle or a new rectangle
      */
     public static Figure crearFigura(String tipo) {
-
-        if (mapa.get(tipo)!=null) {
-
-            return mapa.get(tipo).get();
-        }else {
-            return null;
-        }
-
+        return mapa.get(tipo)!=null? mapa.get(tipo).get() : null;
     }
 
 }

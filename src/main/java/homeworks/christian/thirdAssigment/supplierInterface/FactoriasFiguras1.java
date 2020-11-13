@@ -8,7 +8,6 @@ public class FactoriasFiguras1 {
      * @return new circle or new rectangle
      */
     public static Figure crearFigura(String tipo){
-
         if (tipo.equals("Rectangle")) {
             return new Rectangle();
         }else {

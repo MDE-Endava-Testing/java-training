@@ -7,5 +7,4 @@ public abstract class Figure {
      * @return
      */
     public abstract double area();
-
 }

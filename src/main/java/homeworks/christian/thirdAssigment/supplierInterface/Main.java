@@ -7,9 +7,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-
         Figure f = FactoriasFiguras1.crearFigura("Rectangle");
-
         System.out.println(f.area());
     }
 

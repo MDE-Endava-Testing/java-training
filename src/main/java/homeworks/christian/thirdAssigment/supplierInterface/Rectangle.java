@@ -22,34 +22,18 @@ public class Rectangle extends Figure {
         this(2,2);
     }
 
-    /**
-     * method get lado1
-     * @return lado1
-     */
     public int getLado1() {
         return lado1;
     }
 
-    /**
-     * method set lado1
-     * @param lado1
-     */
     public void setLado1(int lado1) {
         this.lado1 = lado1;
     }
 
-    /**
-     * method get lado2
-     * @return lado2
-     */
     public int getLado2() {
         return lado2;
     }
 
-    /**
-     * method set lado2
-     * @param lado2
-     */
     public void setLado2(int lado2) {
         this.lado2 = lado2;
     }

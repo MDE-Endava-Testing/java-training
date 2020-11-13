@@ -19,18 +19,10 @@ public class Circle extends Figure {
         this(2);
     }
 
-    /**
-     * method get
-     * @return
-     */
     public int getRadio() {
         return radio;
     }
 
-    /**
-     * method set radio
-     * @param radio
-     */
     public void setRadio(int radio) {
         this.radio = radio;
     }

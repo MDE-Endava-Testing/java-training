@@ -12,14 +12,10 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-
         List<String> lista= Arrays.asList("hola","que","tal");
         lista.stream().forEach((x)->System.out.println(x));
-
-
         List<String> lista2=Arrays.asList("hola","que","tal");
         lista2.stream().map((x)->x.toUpperCase()).forEach((x)->System.out.println(x));
-
         List<Persona> lista3= Stream.generate(Persona::new)
                 .limit(100)
                 .peek((p)->p.setNombre("pepe"))
