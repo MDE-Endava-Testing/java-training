@@ -2,10 +2,10 @@ package homeworks.juanpa.firstAssigment.composition;
 
 public class Tester {
 
-    private String role;
-    private String client;
-    private String experience;
-    private int salary;
+    protected String role;
+    protected String client;
+    protected String experience;
+    protected int salary;
 
     public String getRole() {
         return role;
