@@ -16,7 +16,7 @@ public class AppTest
 {
     WebDriver driver;
     /**
-     * Rigorous Test :-]
+     * SetUp and Driver initialization
      */
     @Before
     public void setUp()
@@ -33,10 +33,6 @@ public class AppTest
        formPage.fillForm(studentData);
        assertTrue(formPage.isFormFilledCorrectly.test(studentData));
 
-    }
-    public void nullFieldsTest()
-    {
-        assertTrue( true );
     }
     @After
     public void tearDown()

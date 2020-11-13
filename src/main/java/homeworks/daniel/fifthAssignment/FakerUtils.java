@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * lambda utils created to select and element or group of elements randomly from defined Lists
+ * lambda utils created to select an element or a group of elements randomly from static Lists
  */
 public class FakerUtils {
     static Faker faker = new Faker();
@@ -59,14 +59,14 @@ public class FakerUtils {
          return selectedList;
      };
     /**
-     *
+     * Supplier that returns a random state(key value) from the statesAndCities map
      */
     static Supplier<String> selectState = ()->{
         Set<String> states = statesAndCities.keySet();
         return (String) states.toArray()[faker.number().numberBetween(0,states.size())];
     };
     /**
-     *
+     * Function which returns a random city depending of the state input
      */
     static Function<String,String> selectCity = (state)->{
         List<String> cities = statesAndCities.get(state);

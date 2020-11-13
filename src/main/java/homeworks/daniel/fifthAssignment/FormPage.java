@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
- * POM page containing the form elements
+ * POM page containing the form elements, locators and related methods
  */
 public class FormPage {
     WebDriver driver;
@@ -65,8 +65,8 @@ public class FormPage {
         PageFactory.initElements(driver, this);
     }
     /**
-     *
-     * @param studentData
+     *  Method used for filling all the form fields
+     * @param studentData input object containing al the data needed to fill the form
      */
     public void fillForm(StudentFormDataModel studentData){
         input_firstName.sendKeys(studentData.getFirstName());
@@ -85,6 +85,11 @@ public class FormPage {
         selectStateAndCity(dropDown.city,studentData.getCity());
         submitBtn.click();
     }
+
+    /**
+     * Adds the List of subjects randomly selected to the hobbies field
+     * @param subjects random List containing the subjects of the student object
+     */
     private void inputSubjects(List<String> subjects){
         Consumer<String> selectDropdownItem = (value)->{
           input_Subjects.click();
@@ -95,6 +100,11 @@ public class FormPage {
         };
         subjects.forEach(selectDropdownItem);
     }
+
+    /**
+     * Adds the List of hobbies randomly selected to the hobbies field
+     * @param hobbies andom List containing the hobbies of the student object
+     */
     private void selectHobbies(List<String> hobbies){
         Consumer<String> checkHobbies = (value)->{
             By xpathLocator = By.xpath(String.format(hobbiesXpath,value));
@@ -102,6 +112,12 @@ public class FormPage {
         };
         hobbies.forEach(checkHobbies);
     }
+
+    /**
+     * Does the selection for the dropdown elements
+     * @param stateOrCity indicates the dropDown to select (state or city)
+     * @param value indicates de value that will be selected in the dropdown
+     */
     private void selectStateAndCity(dropDown stateOrCity,String value){
         WebElement dropDownElement = driver.findElement(By.cssSelector(String.format(dropDown_StateAndCity,stateOrCity)));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",dropDownElement);
@@ -109,6 +125,9 @@ public class FormPage {
         By xpathLocator = By.xpath(String.format(dropDownElements,value));
         driver.findElement(xpathLocator).click();
     }
+    /**
+     * predicate used to compare the student data against the submitted form
+     */
     Predicate<StudentFormDataModel> isFormFilledCorrectly = (studentData)->{
         if(!tableValues.get(0).getText().contains(studentData.getFirstName()) ||
            !tableValues.get(0).getText().contains(studentData.getLastName()))
