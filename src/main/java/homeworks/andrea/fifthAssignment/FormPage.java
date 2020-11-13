@@ -4,12 +4,14 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+
 
 /**
  * This class corresponds to a dummy form used for automation practicing purposes.
@@ -54,6 +56,9 @@ public class FormPage {
     @FindBy(xpath = "//form[@id='userForm']/div[@id='stateCity-wrapper']//div[@id='city']//input")
     private WebElement cityField;
 
+    @FindBy(xpath = "//*[@id='uploadPicture']")
+    private WebElement chooseFileButton;
+
     @FindBy(xpath = "//button[@id='submit']")
     private WebElement submitButton;
 
@@ -77,7 +82,7 @@ public class FormPage {
     public void fillInformationLambdas(Map<String, String> information) {
         fillBasicUserInformation(information.get("firstName"), information.get("lastName"), information.get("email"),
                 information.get("gender"), information.get("number"));
-        fillAdditionalInformation(information.get("subject"), information.get("hobby"));
+        fillAdditionalInformation(information.get("subject"), information.get("hobby"),information.get("file"));
         scrollDown.accept(driver, addressField);
         fillPlaceInformation(information.get("address"), information.get("state"), information.get("city"));
         clickElement.accept(submitButton);
@@ -121,10 +126,11 @@ public class FormPage {
      * @param subject selected by the user
      * @param hobby   selected by the user
      */
-    private void fillAdditionalInformation(String subject, String hobby) {
+    private void fillAdditionalInformation(String subject, String hobby, String file) {
         sendKeys.accept(subjectField, subject);
         sendEnter.accept(subjectField);
         hobbiesFields.stream().filter(e -> isTextEqual.test(e, hobby)).forEach(clickElement);
+        sendKeys.accept(chooseFileButton, new File(file).getAbsolutePath());
     }
 
     /**

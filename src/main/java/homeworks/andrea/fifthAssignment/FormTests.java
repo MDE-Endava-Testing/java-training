@@ -41,9 +41,9 @@ public class FormTests {
         information.put("state", "NCR");
         information.put("city", "Delhi");
         information.put("hobby", "Sports");
+        information.put("file","src/main/java/homeworks/andrea/fifthAssignment/photo.jpg");
 
         form.fillInformationLambdas(information);
-
     }
 
     @Test
