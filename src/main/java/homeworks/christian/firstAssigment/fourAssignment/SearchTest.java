@@ -36,7 +36,7 @@ public class SearchTest {
     public void getAllLinksUsingLambda() {
         String wordText = "car";
         this.driver.get("https://www.google.com.co/");
-        search.searchWithText(wordText);
+        search.searchWithText(wordText).firstPage();
     }
 
     /**
