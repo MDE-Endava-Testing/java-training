@@ -23,7 +23,7 @@ public class Calculator {
 
         String operation = "5 + 2 - 3 * 7 + 2 / 3";
         String operation1 = "10 / 2 * 3 - 3 / 3 * 5";
-        String operation2 = "9 * 9 - 1 * 7 / 8 + D30";
+        String operation2 = "9 * 9 - 1 * 7 / 8 + 30";
 
         List<String> operationArray = Arrays.asList(operation.split(" "));
         List<String> operationArray1 = Arrays.asList(operation1.split(" "));
