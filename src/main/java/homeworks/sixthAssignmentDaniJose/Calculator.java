@@ -10,8 +10,8 @@ public class Calculator {
     private static final Map<String, IntBinaryOperator> map = new HashMap<>();
 
     /**
-     * The main method that add the operations to the map and
-     * do the call to calculate of each expressions
+     * The main method adds all the basic operations to a hashmap and
+     * calls the corresponding method to calculate each expression
      * @param args
      */
     public static void main(String[] args) {
@@ -35,10 +35,10 @@ public class Calculator {
     }
 
     /**
-     *CalculatorCode method the calculation of each expressions
-     * @param operation is the input of this method, receive the expression
+     * The CalculatorCode method does the calculation of each expression
+     * @param operation is the input of this method, it receives the expression
      *                  that we want to calculate
-     * @return result is the value or result of the expression
+     * @return result is the calculated value or result of the expression
      */
     private static int calculatorCode(List<String> operation) {
         int result = 0;
@@ -71,7 +71,7 @@ public class Calculator {
     }
 
     /**
-     * Function lambda to validate that the sting is an int
+     * Function lambda to validate that the string is an int
      */
     static Function<String, Boolean> isNumeric =
             (string) -> {
@@ -84,7 +84,7 @@ public class Calculator {
             };
 
     /**
-     * Predicate lambda to validate that the sting is an int
+     * Predicate lambda to validate that the string is an int
      */
     static Predicate<String> isNumeric1 =
             (string) -> {
