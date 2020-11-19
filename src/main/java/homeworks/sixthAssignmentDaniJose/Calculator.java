@@ -10,7 +10,8 @@ public class Calculator {
     private static final Map<String, IntBinaryOperator> map = new HashMap<>();
 
     /**
-     *
+     * The main method that add the operations to the map and
+     * do the call to calculate of each expressions
      * @param args
      */
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class Calculator {
 
         String operation = "5 + 2 - 3 * 7 + 2 / 3";
         String operation1 = "10 / 2 * 3 - 3 / 3 * 5";
-        String operation2 = "9 * 9 - 1 * 7 / 8 + 30";
+        String operation2 = "9 * 9 - 1 * 7 / 8 + D30";
 
         List<String> operationArray = Arrays.asList(operation.split(" "));
         List<String> operationArray1 = Arrays.asList(operation1.split(" "));
@@ -34,9 +35,10 @@ public class Calculator {
     }
 
     /**
-     *
-     * @param operation
-     * @return
+     *CalculatorCode method the calculation of each expressions
+     * @param operation is the input of this method, receive the expression
+     *                  that we want to calculate
+     * @return result is the value or result of the expression
      */
     private static int calculatorCode(List<String> operation) {
         int result = 0;
@@ -69,7 +71,7 @@ public class Calculator {
     }
 
     /**
-     *
+     * Function lambda to validate that the sting is a int
      */
     static Function<String, Boolean> isNumeric =
             (string) -> {
@@ -82,7 +84,7 @@ public class Calculator {
             };
 
     /**
-     * 
+     * Predicate lambda to validate that the sting is a int
      */
     static Predicate<String> isNumeric1 =
             (string) -> {
