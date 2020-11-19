@@ -71,7 +71,7 @@ public class Calculator {
     }
 
     /**
-     * Function lambda to validate that the sting is a int
+     * Function lambda to validate that the sting is an int
      */
     static Function<String, Boolean> isNumeric =
             (string) -> {
@@ -84,7 +84,7 @@ public class Calculator {
             };
 
     /**
-     * Predicate lambda to validate that the sting is a int
+     * Predicate lambda to validate that the sting is an int
      */
     static Predicate<String> isNumeric1 =
             (string) -> {
