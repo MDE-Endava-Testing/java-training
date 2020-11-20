@@ -1,4 +1,4 @@
-package homeworks.sixthAssignmentDaniJose;
+package homeworks.sixthAssignmentDaniJose.Approach1;
 
 import java.util.*;
 import java.util.function.Function;

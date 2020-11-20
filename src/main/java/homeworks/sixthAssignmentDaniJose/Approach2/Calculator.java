@@ -1,4 +1,4 @@
-package homeworks.daniel.SixthAssignment;
+package homeworks.sixthAssignmentDaniJose.Approach2;
 
 import java.util.HashMap;
 import java.util.Map;

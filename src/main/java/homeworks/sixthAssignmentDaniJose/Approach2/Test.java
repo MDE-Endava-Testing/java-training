@@ -1,4 +1,4 @@
-package homeworks.daniel.SixthAssignment;
+package homeworks.sixthAssignmentDaniJose.Approach2;
 
 public class Test {
     /**
