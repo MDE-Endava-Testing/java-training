@@ -1,5 +1,6 @@
 package lessons.tests;
 
+import lessons.lambda.javasam.supplierEx.DriverFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,16 +12,13 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.function.Predicate;
 
-import static lessons.lambda.javasam.supplier.DriverFactory.getDriver;
-
 public class DriverTest {
     private WebDriver driver;
-
 
     @Before
     public void setDriver() {
         String browser = "chrome";
-        this.driver = getDriver(browser);
+        this.driver = DriverFactory.getDriver(browser);
 //        if ("chrome".equals(browser)) {
 //            System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 //            this.driver = new ChromeDriver();
@@ -34,6 +32,7 @@ public class DriverTest {
 
 //        switch (browser) {
 //            case "chrome":
+//                  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 //                this.driver = new ChromeDriver();
 //            case "firefox":
 //                this.driver = new FirefoxDriver();
@@ -111,7 +110,6 @@ public class DriverTest {
         elements.removeIf(isBlank.or(hasKeyword.negate()));
         elements.forEach(e -> System.out.println("::" + e.getText()));
     }
-
 
     @After
     public void closeDriver() {

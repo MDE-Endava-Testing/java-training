@@ -13,7 +13,6 @@ public class PredicateExample {
         Predicate<String> hasKeyword = e -> e.contains("pizza");
 
 
-
         //System.out.println(isGreaterThanTwo.test(5));
 
 //        System.out.println(isBlank.test("        "));

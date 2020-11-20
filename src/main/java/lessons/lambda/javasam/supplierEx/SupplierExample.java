@@ -1,4 +1,4 @@
-package lessons.lambda.javasam.supplier;
+package lessons.lambda.javasam.supplierEx;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
