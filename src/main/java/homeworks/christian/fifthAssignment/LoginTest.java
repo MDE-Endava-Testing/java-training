@@ -1,6 +1,6 @@
-package homeworks.christian.fiveAssignment;
+package homeworks.christian.fifthAssignment;
 
-import homeworks.christian.fiveAssignment.pageObjects.LoginPage;
+import homeworks.christian.fifthAssignment.pageObjects.LoginPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

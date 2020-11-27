@@ -1,4 +1,4 @@
-package homeworks.christian.fiveAssignment;
+package homeworks.christian.fifthAssignment;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +16,7 @@ public class DriversFactory {
 
     /*Lambdas implemented using Supplier interface for the different web Drivers */
     private static final Supplier<WebDriver> chromeSupplier = () -> {
-        System.setProperty("webdriver.chrome.driver", "src\\main\\java\\homeworks\\christian\\firstAssigment\\fiveAssignment\\driver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\main\\java\\homeworks\\christian\\firstAssigment\\fifthAssignment\\driver\\chromedriver.exe");
         return new ChromeDriver();
     };
 
