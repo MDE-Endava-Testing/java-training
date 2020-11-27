@@ -1,4 +1,4 @@
-package homeworks.christian.firstAssigment.fiveAssignment.pageObjects;
+package homeworks.christian.fiveAssignment.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

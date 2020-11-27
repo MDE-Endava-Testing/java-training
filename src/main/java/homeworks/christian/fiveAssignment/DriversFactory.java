@@ -1,4 +1,4 @@
-package homeworks.christian.firstAssigment.fiveAssignment;
+package homeworks.christian.fiveAssignment;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
