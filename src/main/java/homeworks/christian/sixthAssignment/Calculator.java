@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
 
+/**
+ * class calculator, where get the expresion and
+ * then the calculation will be done
+ */
 public class Calculator {
 
     private static final Map<String, BiFunction<Integer, Integer, Integer>> function = new HashMap<>();
@@ -16,6 +20,11 @@ public class Calculator {
         function.put("/", (a, b) -> a / b);
     }
 
+    /**
+     * Here, a new list "Expresion" is created to start doing the calculations one by one
+     * @param expresion1
+     * @return result
+     */
     public int calculate(String expresion1) {
         int firstNumber = 0;
         int secondNumber = 0;
