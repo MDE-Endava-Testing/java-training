@@ -2,13 +2,14 @@ package homeworks.andrea.eighthAssignment;
 
 import homeworks.andrea.fourthAssignment.DriversFactory;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 /**
  * This class contains basic tests for MyTabPage class
- * Check how to interact with a table using Streams + Lambdas
+ * Checking how to interact with a table using Streams + Lambdas
  */
 public class MyTests {
 
@@ -27,16 +28,19 @@ public class MyTests {
     @Test
     public void selectRowsWithFemaleAsGender() {
         tab.clickOnRowsWithKeyword("Female");
+        Assert.assertEquals(tab.numberOfRowsSelected(), 4);
     }
 
     @Test
     public void selectRowsWithUSAAsCountry() {
         tab.clickOnRowsWithKeyword("USA");
+        Assert.assertEquals(tab.numberOfRowsSelected(), 2);
     }
 
     @Test
     public void selectAllRows() {
         tab.selectAllRows();
+        Assert.assertEquals(tab.numberOfRowsSelected(), 9);
     }
 
     @After

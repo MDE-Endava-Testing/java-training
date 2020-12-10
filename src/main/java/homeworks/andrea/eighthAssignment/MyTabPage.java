@@ -21,6 +21,7 @@ public class MyTabPage {
     }
 
     private Predicate<WebElement> isKeywordContained = (e) -> e.getText().contains(keyword);
+    private Predicate<WebElement> isRowSelected = WebElement::isSelected;
 
     private void getLinksWithLambdas(Predicate<WebElement> pred) {
         driver.findElements(By.xpath("/html/body/table/tbody/tr")).stream().filter(pred).forEach(e -> e.findElement(By.tagName("input")).click());
@@ -42,6 +43,13 @@ public class MyTabPage {
      */
     public void selectAllRows() {
         driver.findElements(By.tagName("input")).forEach(e -> e.click());
+    }
+
+    /**
+     * This method returns the number of rows selected
+     */
+    public int numberOfRowsSelected() {
+        return (int) driver.findElements(By.tagName("input")).stream().filter(isRowSelected).count();
     }
 
 }
